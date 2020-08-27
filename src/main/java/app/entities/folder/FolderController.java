@@ -1,4 +1,4 @@
-package entities;
+package app.entities.folder;
 
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
@@ -56,11 +56,11 @@ class FolderController {
     }
 
     @PutMapping("/folders/{id}")
-    ResponseEntity<?> replaceEmployee(@RequestBody Folder newFolder, @PathVariable Long id) {
+    ResponseEntity<?> replaceFolder(@RequestBody Folder newFolder, @PathVariable Long id) {
         Folder updatedFolder = repository.findById(id)
                                            .map(folder -> {
-                                                folder.setName(folder.getName());
-                                                folder.setDescription(folder.getDescription());
+                                                folder.setName(newFolder.getName());
+                                                folder.setDescription(newFolder.getDescription());
                                                 return repository.save(folder);
                                             })
                                           .orElseGet(() -> {

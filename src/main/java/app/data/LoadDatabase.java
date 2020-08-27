@@ -1,5 +1,7 @@
-package entities;
+package app.data;
 
+import app.entities.folder.Folder;
+import app.entities.folder.FolderRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;

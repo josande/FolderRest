@@ -1,4 +1,4 @@
-package entities;
+package app.entities.folder;
 
 import java.util.Objects;
 
@@ -12,11 +12,12 @@ import lombok.*;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
+@Data
 @Builder
 public class Folder {
 
-    @Setter @Id @GeneratedValue(strategy = GenerationType.IDENTITY) private Long id;
-    @Setter private String name;
-    @Setter private String description;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) private Long id;
+    private String name;
+    private String description;
+
 }

@@ -1,4 +1,4 @@
-package entities;
+package app.entities.folder;
 
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;

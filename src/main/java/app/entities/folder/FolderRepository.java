@@ -1,4 +1,4 @@
-package entities;
+package app.entities.folder;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
